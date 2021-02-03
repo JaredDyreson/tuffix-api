@@ -20,7 +20,8 @@ setup(
     license='MIT',
     packages=[PKG_NAME],
     install_requires = [
-      'flask-restful'
+      'flask-restful',
+      'Flask'
     ],
     include_package_data=True,
     classifiers=['Programming Language :: Python :: 3.8']

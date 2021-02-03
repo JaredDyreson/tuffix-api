@@ -1,0 +1,13 @@
+[Unit]
+Description=uWSGI instance to serve the tuffix api Flask application
+After=network.target
+
+[Service]
+User=sammy
+Group=www-data
+WorkingDirectory=/home/dummy/tuffix-api
+Environment="PATH=/home/dummy/tuffix-api/env/bin"
+ExecStart=/home/dummy/tuffix-api/env/bin/uwsgi --ini api.ini
+
+[Install]
+WantedBy=multi-user.target
